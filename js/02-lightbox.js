@@ -11,18 +11,18 @@ const gallery = new SimpleLightbox('.gallery a', {
         captionPosition: 'bottom',
 });
     
-list.addEventListener('click', handleClick);
+// list.addEventListener('click', handleClick);
 
 function createMarkup(arr) {
     return arr.map(({ preview, original, description }) =>
         `<li class="gallery__item"><a class="gallery__link" href="${original}"><img src="${preview}" alt="${description}"  class="gallery__image" /></a></li>`).join('');
 }
 
-function handleClick(event) {
-    event.preventDefault();
-    if (!event.target.classList.contains('gallery__image')) {
-        return;
-    }
-}
+// function handleClick(event) {
+//     event.preventDefault();
+//     if (!event.target.classList.contains('gallery__image')) {
+//         return;
+//     }
+// }
 
 
